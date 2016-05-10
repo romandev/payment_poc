@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shopping Cart</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>		
+		<link rel="stylesheet" type="text/css" href="assets/css/dropdown.css"/>		
+		<link rel="stylesheet" type="text/css" href="assets/css/dropdown-flat.css"/>		
+	</head>
+
+	<body>
+		
+		<nav class="navbar">
+			<div class="container">
+				<a class="navbar-brand" href="#">Payment POC Demo</a>
+				<div class="navbar-right">
+					<div class="container minicart"></div>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid breadcrumbBox text-center">
+			<ol class="breadcrumb">
+				<li><a href="#">Review</a></li>
+				<li class="active"><a href="#">Order</a></li>
+				<li><a href="#">Payment</a></li>
+			</ol>
+		</div>
+		
+		<div class="container text-center">
+
+			<div class="col-md-7 col-sm-12 text-left">
+				<ul>
+					<li class="row list-inline columnCaptions">
+						<span>QTY</span>
+						<span>ITEM</span>
+						<span>Price</span>
+					</li>
+					<li class="row">
+						<span class="quantity">1</span>
+						<span class="itemName">Samsung Galaxy S7</span>
+						<span class="popbtn"><a class="arrow"></a></span>
+						<span class="price">$669.99</span>
+					</li>
+					<li class="row">
+						<span class="quantity">1</span>
+						<span class="itemName">Samsung ATIV 9</span>
+						<span class="popbtn"><a class="arrow"></a></span>
+						<span class="price">$1399.99</span>
+					</li>
+					<li class="row">
+						<span class="quantity">1</span>
+						<span class="itemName">Canon EOS 70D</span>
+						<span class="popbtn"><a class="arrow"></a></span>
+						<span class="price">$1299.00</span>
+					</li>
+					<li class="row totals">
+						<span class="itemName">Total:</span>
+						<span class="price">$3368.98</span>
+					</li>
+					<li class="row totals">
+						<span class="itemName">Payment:</span>
+					</li>
+                                        <li class="row totals">
+                                                <div class="radio"><input type="radio" name="radio" class="radio" id="radio1" disabled><label for="radio1">휴대폰 소액결제</label></div>
+                                                <div class="radio"><input type="radio" name="radio" class="radio" id="radio2" disabled><label for="radio2">무통장 입금</label></div>
+                                                <div class="radio"><input type="radio" name="radio" class="radio" id="radio3" checked><label for="radio3">신용카드</label></div>
+                                                <div class="radio">
+                                                <select class="dropdown" style="width: 150px; background: white;">
+                                                    <option>삼성카드</option>
+                                                </select>
+                                                <select class="dropdown" style="width:100px; background: white;">
+                                                    <option>일시불</option>
+                                                </select></div>
+						<span class="order"><a class="text-center" href="./samsung_card.html">결제하기</a></span>
+                                        <li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- The popover content -->
+
+		<div id="popover" style="display: none">
+			<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+		</div>
+		
+		<!-- JavaScript includes -->
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/customjs.js"></script>
+
+	</body>
+</html>

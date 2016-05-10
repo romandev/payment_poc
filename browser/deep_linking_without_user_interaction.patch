@@ -1,0 +1,41 @@
+diff --git a/app/src/com/sec/android/app/sbrowser/tab/SBrowserTab.java b/app/src/com/sec/android/app/sbrowser/tab/SBrowserTab.java
+index 9609939..642d8cc 100644
+--- a/app/src/com/sec/android/app/sbrowser/tab/SBrowserTab.java
++++ b/app/src/com/sec/android/app/sbrowser/tab/SBrowserTab.java
+@@ -4076,11 +4076,6 @@ public class SBrowserTab implements ITab, IHideUrlBarListener {
+             switch (result) {
+                 /* We should override the URL loading and launch an intent. */
+                 case OVERRIDE_WITH_EXTERNAL_INTENT:
+-                    assert mUrlNavigationHandler.canExternalAppHandleUrl(
+-                            swNavigationParams.getUrl());
+-                    if (swNavigationParams.isMainFrame()) {
+-                        onOverrideUrlLoadingAndLaunchIntent();
+-                    }
+                     return true;
+                 /* We should override the URL loading and clobber the current tab. */
+                 case OVERRIDE_WITH_CLOBBERING_TAB:
+@@ -6504,4 +6499,4 @@ public class SBrowserTab implements ITab, IHideUrlBarListener {
+ 
+         return sharedPreferences.getBoolean(PreferenceKeys.PREF_VIDEO_ASSIST, true);
+     }
+-}
+\ No newline at end of file
++}
+diff --git a/app/src/com/sec/android/app/sbrowser/tab/urlinterpretnav/UrlNavigationHandler.java b/app/src/com/sec/android/app/sbrowser/tab/urlinterpretnav/UrlNavigationHandler.java
+index 1faafaf..b3eeb9a 100644
+--- a/app/src/com/sec/android/app/sbrowser/tab/urlinterpretnav/UrlNavigationHandler.java
++++ b/app/src/com/sec/android/app/sbrowser/tab/urlinterpretnav/UrlNavigationHandler.java
+@@ -197,13 +197,6 @@ public class UrlNavigationHandler {
+             return OverrideUrlLoadingResult.OVERRIDE_WITH_MEDIA_PLAYER_ACTION;
+         }
+ 
+-        if (params.getRedirectHandler() != null) {
+-            if (params.getRedirectHandler().shouldStayInSBrowser(isExternalProtocol)
+-                    || params.getRedirectHandler().shouldNotOverrideUrlLoading()) {
+-                return OverrideUrlLoadingResult.NO_OVERRIDE;
+-            }
+-        }
+-
+         boolean linkNotFromIntent = isLink && !isFromIntent;
+ 
+         boolean isOnEffectiveIntentRedirect = params.getRedirectHandler() == null ? false

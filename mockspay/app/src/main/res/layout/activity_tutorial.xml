@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:weightSum="1"
+    android:background="#c8000000"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tutorial_view"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="This is a shortcut of SamsungPay."
+            android:id="@+id/textView4"
+            android:textColor="#ffffff"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="To pay with this card, just scan your fingerprint."
+            android:id="@+id/textView5"
+            android:textColor="#ffffff"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="32dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don&apos;t show me this tutorial again."
+            android:id="@+id/dont_show_me"
+            android:textColor="#787878"
+            android:buttonTint="#787878"
+            android:layout_marginLeft="25dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</LinearLayout>

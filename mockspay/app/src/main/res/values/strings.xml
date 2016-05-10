@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MockSamsungPay</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="title_activity_spay">SPayActivity</string>
+</resources>
